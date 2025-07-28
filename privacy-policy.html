@@ -1,95 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | DevitTestApp</title>
   <style>
     :root {
-      --bg-color: #f6f8fa;
-      --box-color: #ffffff;
-      --text-color: #333;
       --primary-color: #0a66c2;
+      --background: #f4f6f9;
+      --text-color: #333;
+      --card-bg: #fff;
       --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background: var(--bg-color);
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
       color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
     }
 
     .container {
       max-width: 800px;
-      margin: 60px auto;
-      padding: 40px;
-      background: var(--box-color);
+      margin: 3rem auto;
+      background: var(--card-bg);
+      padding: 2rem;
       border-radius: 12px;
       box-shadow: var(--shadow);
+      animation: fadeIn 1s ease-in-out;
     }
 
-    h1 {
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
       color: var(--primary-color);
-      font-size: 32px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.5rem;
     }
 
-    p {
-      font-size: 18px;
-      line-height: 1.7;
+    section {
+      margin-bottom: 2rem;
     }
 
     footer {
       text-align: center;
-      padding: 30px 0 10px;
-      color: #999;
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--primary-color);
-      color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 2rem;
       font-size: 14px;
-      box-shadow: var(--shadow);
+      color: #777;
     }
 
-    .dark-mode {
-      --bg-color: #0f172a;
-      --box-color: #1e293b;
-      --text-color: #e2e8f0;
-      --primary-color: #3b82f6;
+    .contact {
+      background: #f0f4ff;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  <header>
+    <h1>DevitTestApp</h1>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#policy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <div class="container">
-    <h1>Privacy Policy</h1>
-    <p>This app does not collect or store personal data. All user information is handled securely and only with consent.</p>
+    <section id="overview">
+      <h2>📱 Welcome to DevitTestApp</h2>
+      <p>Thank you for using our app! We care deeply about your privacy and data protection. Please read the sections below for details.</p>
+    </section>
 
-    <p>If you have any questions about this Privacy Policy, feel free to contact us at <strong>khoeurndevit@gmail.com</strong>.</p>
+    <section id="policy">
+      <h2>🔐 Privacy Policy</h2>
+      <p>This app does not collect or store personal data. All user information is handled securely and only with consent.</p>
+      <ul>
+        <li>✅ No data is collected</li>
+        <li>✅ No tracking or analytics</li>
+        <li>✅ Secure login with Facebook only</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🗑️ Data Deletion</h2>
+      <p>If you wish to delete your data or remove access to your account, please contact us or follow Facebook's data management guidelines.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>📩 Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, feel free to reach out:</p>
+      <p><strong>Email:</strong> khoeurndevit@gmail.com</p>
+    </section>
   </div>
 
   <footer>
-    &copy; 2025 DevitTestApp &mdash; All Rights Reserved
+    © 2025 DevitTestApp — All Rights Reserved
   </footer>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 </body>
 </html>
